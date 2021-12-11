@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "FnijhZ8dlmu9xJPvWtqqtqKgsjLn71kPxrWnKzdBw4NxJP0j4iMpJBwYrEUJTrg8uMgcJBjlwt7HbWw0yea7lg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\roya.taleghani\\OneDrive - MYOB\\Documents\\Projects\\PaySlip\\PaySlip\\Payslip.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\roya.taleghani\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
+  "logs": []
+}

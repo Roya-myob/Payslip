@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\roya.taleghani\\OneDrive - MYOB\\Documents\\Projects\\PaySlip\\PaySlip\\Payslip.csproj",
+      "projectUniqueName": "C:\\Users\\roya.taleghani\\OneDrive - MYOB\\Documents\\Projects\\Payslip\\Payslip\\Payslip.csproj",
       "projectName": "Payslip",
-      "projectPath": "C:\\Users\\roya.taleghani\\OneDrive - MYOB\\Documents\\Projects\\PaySlip\\PaySlip\\Payslip.csproj",
+      "projectPath": "C:\\Users\\roya.taleghani\\OneDrive - MYOB\\Documents\\Projects\\Payslip\\Payslip\\Payslip.csproj",
       "packagesPath": "C:\\Users\\roya.taleghani\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\roya.taleghani\\OneDrive - MYOB\\Documents\\Projects\\PaySlip\\PaySlip\\obj\\",
+      "outputPath": "C:\\Users\\roya.taleghani\\OneDrive - MYOB\\Documents\\Projects\\Payslip\\Payslip\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

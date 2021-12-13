@@ -2,30 +2,32 @@
 {
     public class EmployeeDetails
     {
-        private  EmployeeName _employeeName;
-        private  EmployeeSurname _employeeSurname;
-       
-        
+        private string _employeeName;
+        private string _employeeSurname;
+        private int _annualSalary;
 
-        public EmployeeDetails(EmployeeName employeeName, EmployeeSurname employeeSurname)
+
+        public EmployeeDetails(string employeeName, string employeeSurname, int annualSalary)
         {
             _employeeName = employeeName;
             _employeeSurname = employeeSurname;
-           
+            _annualSalary = annualSalary;
         }
 
 
-        public  EmployeeName GetEmployeeDetailsName()
+        public string GetFirstName()
         {
             return _employeeName;
         }
 
-        public  EmployeeSurname GetEmployeeDetailsSurname()
+        public string GetLastName()
         {
             return _employeeSurname;
         }
 
-       
-        
+        public int GetAnnualSalary()
+        {
+            return _annualSalary;
+        }
     }
 }

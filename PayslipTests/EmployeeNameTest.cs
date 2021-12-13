@@ -12,8 +12,7 @@ namespace PayslipTests
             var expectedName = employeeName.GetName();
             var actualName = "John";
             Assert.Equal(expectedName,actualName);
-            
-            
+
         }
         [Fact]
         public void Payslip_takes_employee_surname()
@@ -22,8 +21,7 @@ namespace PayslipTests
             var expectedSurname = employeeSurname.GetSurname();
             var actualSurname = "Doe";
             Assert.Equal(expectedSurname,actualSurname);
-
-
+            
             
         }
         

@@ -14,10 +14,10 @@ namespace Payslip
             _employeeSuper = employeeSuper;
         }
 
-        public int EmployeeSuper()
+        /*public int EmployeeSuper()
         {
-           return _employeeSuper.CalculateSuper();
-        }
+          // return _employeeSuper.CalculateSuper();
+        }*/
         
     }
 

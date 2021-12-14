@@ -4,6 +4,7 @@
     {
         private int _super;
         private EmployeeAnnualSalary _employeeAnnualSalary;
+        private EmployeeAnnualSalary _grossIncome;
 
         public EmployeeSuper(EmployeeAnnualSalary employeeAnnualSalary, int super)
         {
@@ -11,10 +12,13 @@
             _employeeAnnualSalary = employeeAnnualSalary;
         }
         
-        public int CalculateSuper()
-        {
-            var super = (_employeeAnnualSalary.GrossIncome() * _super) / 100;
-            return super;
-        }
+        // public int CalculateSuper()
+        // {
+        //     var super = (_employeeAnnualSalary.GrossIncome() * _super) / 100;
+        //     return super;
+        //
+        //   
+        //    
+        // }
     }
 }

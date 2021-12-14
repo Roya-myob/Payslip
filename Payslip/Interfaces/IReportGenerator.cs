@@ -2,6 +2,8 @@
 {
     public interface IReportGenerator
     {
-        string GenerateReport(EmployeeDetails employeeDetails);
+        string GenerateReport(PayslipReportData payslipReportData);
+       
     }
+
 }

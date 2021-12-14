@@ -4,14 +4,17 @@
     {
         private string _employeeName;
         private string _employeeSurname;
-        private int _annualSalary;
+        private string _startDate;
+        private string _endDate;
+  
 
 
-        public EmployeeDetails(string employeeName, string employeeSurname, int annualSalary)
+        public EmployeeDetails(string employeeName, string employeeSurname, string startDate, string endDate)
         {
             _employeeName = employeeName;
             _employeeSurname = employeeSurname;
-            _annualSalary = annualSalary;
+            _startDate = startDate;
+            _endDate = endDate;
         }
 
 
@@ -25,9 +28,18 @@
             return _employeeSurname;
         }
 
-        public int GetAnnualSalary()
+        public string GetStartDate()
         {
-            return _annualSalary;
+            return _startDate;
         }
+
+        public string GetEndDate()
+        {
+            return _endDate;
+        }
+
+        
+
     }
+    
 }

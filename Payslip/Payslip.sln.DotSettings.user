@@ -8,5 +8,6 @@
     &lt;TestId&gt;xUnit::52F23659-1583-4D7F-91D9-C9CD58E90CC6::.NETCoreApp,Version=v3.1::PayslipTests.TaxCalculatorTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::52F23659-1583-4D7F-91D9-C9CD58E90CC6::.NETCoreApp,Version=v3.1::PayslipTests.ReportTest.Generate_Report&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::52F23659-1583-4D7F-91D9-C9CD58E90CC6::.NETCoreApp,Version=v3.1::PayslipTests.ReportTest.Generate_Report_2&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::52F23659-1583-4D7F-91D9-C9CD58E90CC6::.NETCoreApp,Version=v3.1::PayslipTests.ReportTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

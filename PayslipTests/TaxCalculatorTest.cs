@@ -15,7 +15,7 @@ namespace PayslipTests
             decimal rate, int fixedAmount, decimal expectedResult)
         {
             TaxCalculator taxCalculator = new TaxCalculator();
-            Assert.Equal(expectedResult, taxCalculator.Calculate(new EmployeeAnnualSalary(salary)));
+            Assert.Equal(expectedResult, taxCalculator.Calculate(salary));
         }
 
         [Theory]
@@ -28,7 +28,7 @@ namespace PayslipTests
             int higherBound, decimal rate, int fixedAmount, decimal expectedResult)
         {
             TaxCalculator taxCalculator = new TaxCalculator();
-            Assert.Equal(expectedResult, taxCalculator.Calculate(new EmployeeAnnualSalary(salary)));
+            Assert.Equal(expectedResult, taxCalculator.Calculate(salary));
         }
     }
 }   

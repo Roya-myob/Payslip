@@ -1,5 +1,7 @@
 ﻿using System;
-using System.Threading;
+using Payslip.BusinessLogic;
+using Payslip.BusinessLogic.Interface;
+using Payslip.BusinessLogic.ReportGenerator.Interface;
 
 namespace Payslip
 {
@@ -7,7 +9,7 @@ namespace Payslip
     {
         static void Main(string[] args)
         {
-            // fields to ask employee
+            // Capture user input
             Console.WriteLine("Please enter your name:");
             var firstName = Console.ReadLine();
             
@@ -18,7 +20,7 @@ namespace Payslip
             var annualSalary = int.Parse(Console.ReadLine() ?? "0");
             
             Console.WriteLine("Please enter your super rate:");
-            var super = int.Parse(Console.ReadLine() ?? "0");
+            var superRate = int.Parse(Console.ReadLine() ?? "0");
             
             Console.WriteLine("Please enter your payment start date:");
             var startDate = Console.ReadLine();
@@ -26,23 +28,28 @@ namespace Payslip
             Console.WriteLine("Please enter your payment end date:");
             var endDate = Console.ReadLine();
 
-
-            // field required for report
+            // Annual salary calculation and print report
             var employeeDetails = new EmployeeDetails(firstName, surName, startDate, endDate);
-            var employeeAnnualSalary = new EmployeeAnnualSalary(annualSalary, super);
-            
-            //
-            TaxCalculator calculator = new TaxCalculator();
-            var tax = calculator.Calculate(employeeAnnualSalary);
-            employeeAnnualSalary.SetTax(tax);
-            //
-            
+            Start(employeeDetails, annualSalary, superRate);
+        }
+
+        private static void Start(EmployeeDetails employeeDetails, int annualSalary, int superRate)
+        {
+            // Get data needed to generate report
+            ITaxCalculator taxCalculator = new TaxCalculator();
+            var payslipRulesParameters = new PayslipRulesParameters(annualSalary, superRate);
+            var payslipRules = new PayslipRules(taxCalculator, payslipRulesParameters);
+            var employeeAnnualSalary = payslipRules.Run();
+
+            // Generate the report by using Annual Salary calculated data
+            var payslipReportData = new PayslipReportData(employeeDetails, employeeAnnualSalary);
             IReportGenerator reportGenerator = new PayslipReport();
-           var reportResult = reportGenerator.GenerateReport(new PayslipReportData(employeeDetails,employeeAnnualSalary));
+            var report = reportGenerator.GenerateReport(payslipReportData);
             
+            // print report to console
             Console.WriteLine(Environment.NewLine);
             Console.WriteLine("Your payslip has been generated:" + Environment.NewLine);
-            Console.WriteLine(reportResult);
+            Console.WriteLine(report, ConsoleColor.Green);
             Console.WriteLine("Thank you for using MYOB!" + Environment.NewLine);
         }
     }

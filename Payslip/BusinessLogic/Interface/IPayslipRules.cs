@@ -5,6 +5,6 @@
         EmployeeAnnualSalary Run();
         int GetGrossIncome();
         decimal GetNetIncome();
-        int CalculateSuper();
+        int GetSuperIncome();
     }
 }

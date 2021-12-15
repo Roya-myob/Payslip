@@ -7,7 +7,7 @@ namespace Payslip
     public class TaxCalculator : ITaxCalculator
     {
         private List<TaxBracket> _taxBracketsList;
-        // private EmployeeAnnualSalary _employeeAnnualSalary;
+       
         
         public TaxCalculator()
         {
@@ -21,7 +21,7 @@ namespace Payslip
             };
         }
         
-        public decimal Calculate(int annualSalary)
+        public decimal CalculateTaxIncome(int annualSalary)
         {
             decimal tax = 0;
             

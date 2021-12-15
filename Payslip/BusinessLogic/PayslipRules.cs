@@ -17,10 +17,10 @@ namespace Payslip.BusinessLogic
 
         public EmployeeAnnualSalary Run()
         {
-            var tax = _taxCalculator.Calculate(_annualSalary);
+            var tax = _taxCalculator.CalculateTaxIncome(_annualSalary);
             
             var grossIncome = GetGrossIncome();
-            var super = CalculateSuper();
+            var super = GetSuperIncome();
             var netIncome = GetNetIncome();
             
             var result = new EmployeeAnnualSalary(_annualSalary, grossIncome, tax, netIncome, super);
@@ -36,13 +36,11 @@ namespace Payslip.BusinessLogic
         
         public decimal GetNetIncome()
         {
-            // Gross - tax
-            var tax = _taxCalculator.Calculate(_annualSalary);
-            
+            var tax = _taxCalculator.CalculateTaxIncome(_annualSalary);
             return GetGrossIncome() - tax;
         }
         
-        public int CalculateSuper()
+        public int GetSuperIncome()
         {
             var super = (GetGrossIncome() * _superRate) / 100;
             return super;

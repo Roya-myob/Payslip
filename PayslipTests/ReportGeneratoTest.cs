@@ -21,7 +21,7 @@ namespace PayslipTests
             PayslipRules payslipRules = new PayslipRules(taxCalculator,payslipRulesParameters);
             var annualSalary = payslipRules.Run();
             
-             IReportGenerator reportGenerator = new PayslipReport();
+             IReportGenerator reportGenerator = new ReportGenerator();
              EmployeeDetails details = new EmployeeDetails(name, surname,startDate, endDate );
             
             

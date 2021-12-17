@@ -4,7 +4,7 @@ using Payslip.BusinessLogic.ReportGenerator.Interface;
 
 namespace Payslip
 {
-    public class PayslipReport : IReportGenerator
+    public class ReportGenerator : IReportGenerator
     {
         public string GenerateReport(PayslipReportData payslipReportData)
         {

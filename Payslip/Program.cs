@@ -45,7 +45,7 @@ namespace Payslip
 
             // Generate the report by using Annual Salary calculated data
             var payslipReportData = new PayslipReportData(employeeDetails, employeeAnnualSalary);
-            IReportGenerator reportGenerator = new PayslipReport();
+            IReportGenerator reportGenerator = new ReportGenerator();
             var report = reportGenerator.GenerateReport(payslipReportData);
             
             // print report to console
